@@ -27,6 +27,6 @@ To let RoboVM make an iOS app on iphone, ipad simulator or iOS Device we need to
 
 
 
-!![ScreenShot](https://github.com/Kourtessia/JavaFX-for-iOS/blob/master/src/main/resources/images/JavaFX_for_iOS_nameAdded.PNG?raw=true)
-!![ScreenShot](https://github.com/Kourtessia/JavaFX-for-iOS/blob/master/src/main/resources/images/JavaFX_for_iOS_newContactAdded.PNG?raw=true)
+![ScreenShot](https://github.com/Kourtessia/JavaFX-for-iOS/blob/master/src/main/resources/images/JavaFX_for_iOS_nameAdded.PNG?raw=true)
+![ScreenShot](https://github.com/Kourtessia/JavaFX-for-iOS/blob/master/src/main/resources/images/JavaFX_for_iOS_newContactAdded.PNG?raw=true)
 
