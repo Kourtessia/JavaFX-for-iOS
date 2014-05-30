@@ -11,7 +11,7 @@
   <target>ios</target>
   <forceLinkClasses>
   		    <!-- JAVAFX -->         	      
-          	<pattern>sun.reflect.misc.Trampoline</pattern>
+          	<pattern>sun.reflect.misc.Trampoline</pattern>          	
           	<forceLinkClass>com.sun.scenario.effect.impl.prism.ps.PPSRenderer</forceLinkClass>
           	<forceLinkClass>com.sun.scenario.effect.impl.prism.sw.PSWRenderer</forceLinkClass>
   </forceLinkClasses>
