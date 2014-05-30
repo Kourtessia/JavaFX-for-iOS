@@ -27,9 +27,8 @@
         <plugin>
         <groupId>org.robovm</groupId>
         <artifactId>robovm-maven-plugin</artifactId>
-        <version>${robovm.plugin.version}</version>
-        <packaging>maven-plugin</packaging>
-        <url>https://github.com/robovm/robovm-maven-plugin</url>
+        <version>2.2</version>
+       
         <configuration>
           <config>
             <mainClass>com.asmierciak.designpatterns.singletonshowcase.MainApp</mainClass>
@@ -48,18 +47,6 @@
         </configuration>
       </plugin>
         <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.1</version>
-            <configuration>
-                <source>1.6</source>
-                <target>1.6</target>
-                <debug>true</debug>
-                <showDeprecations>true</showDeprecations>
-                <encoding>UTF-8</encoding>
-            </configuration>
-        </plugin>
-        <plugin>
             <artifactId>maven-plugin-plugin</artifactId>
             <version>2.3</version>
             <configuration>
@@ -74,38 +61,7 @@
                 <configFile>${project.basedir}/formatter.xml</configFile>
             </configuration>
         </plugin>
-        </plugins>
-        <pluginManagement>
-            <plugins>
-                <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
-                <plugin>
-                    <groupId>org.eclipse.m2e</groupId>
-                    <artifactId>lifecycle-mapping</artifactId>
-                    <version>1.0.0</version>
-                    <configuration>
-                        <lifecycleMappingMetadata>
-                            <pluginExecutions>
-                                <pluginExecution>
-                                    <pluginExecutionFilter>
-                                        <groupId>
-                                            com.googlecode.maven-java-formatter-plugin
-                                        </groupId>
-                                        <artifactId>maven-java-formatter-plugin</artifactId>
-                                        <versionRange>[0.4,)</versionRange>
-                                        <goals>
-                                            <goal>format</goal>
-                                        </goals>
-                                    </pluginExecutionFilter>
-                                    <action>
-                                        <ignore />
-                                    </action>
-                                </pluginExecution>
-                            </pluginExecutions>
-                        </lifecycleMappingMetadata>
-                    </configuration>
-                </plugin>
-
-        </plugins>
+    </plugins>
     </build>
 
 
@@ -159,11 +115,6 @@
     <scope>compile</scope>
 </dependency>
 
-<dependency>
-    <groupId>org.robovm</groupId>
-    <artifactId>robovm-compiler</artifactId>
-    <version>${robovm.version}</version>
-</dependency>
 
         <!-- Apache Commons -->
 
