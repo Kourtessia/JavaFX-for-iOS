@@ -6,7 +6,7 @@ import org.robovm.cocoatouch.foundation.NSDictionary;
 import org.robovm.cocoatouch.uikit.UIApplication;
 import org.robovm.cocoatouch.uikit.UIApplicationDelegate;
 
-public class MainApp extends UIApplicationDelegate.Adapter {
+public class RoboVMMain extends UIApplicationDelegate.Adapter {
 
     @Override
     public boolean didFinishLaunching(UIApplication application, NSDictionary launchOptions) {
@@ -14,7 +14,7 @@ public class MainApp extends UIApplicationDelegate.Adapter {
         Thread launchThread = new Thread() {
             @Override
             public void run() {
-                Application.launch(JavaFX_AddressBook.class);
+                Application.launch(JavaFXAddressBook.class);
             }
         };
         launchThread.setDaemon(true);
@@ -28,7 +28,7 @@ public class MainApp extends UIApplicationDelegate.Adapter {
         System.setProperty("prism.text", "native");
 
         NSAutoreleasePool pool = new NSAutoreleasePool();
-        UIApplication.main(args, null, MainApp.class);
+        UIApplication.main(args, null, RoboVMMain.class);
         pool.drain();
     }
 }

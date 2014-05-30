@@ -51,7 +51,7 @@
                 
                 <configuration>
                     <config>
-                        <mainClass>com.kourtessia.impl.MainApp</mainClass>
+                        <mainClass>com.kourtessia.impl.RoboVMMain</mainClass>
                         <os>ios</os>
                         <arch>x86</arch>
                     </config>

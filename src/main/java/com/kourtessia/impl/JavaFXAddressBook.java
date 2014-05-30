@@ -24,7 +24,7 @@ import javafx.stage.Stage;
 import com.kourtessia.logic.AddressBook;
 import com.kourtessia.logic.AddressBookItem;
 
-public class JavaFX_AddressBook extends Application {
+public class JavaFXAddressBook extends Application {
 
 
 
