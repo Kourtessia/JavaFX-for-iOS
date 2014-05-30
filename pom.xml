@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
+    
     <modelVersion>4.0.0</modelVersion>
-
+    
     <groupId>com.asmierciak.designpatterns</groupId>
     <artifactId>singletonshowcase</artifactId>
     <name>singletonshowcase</name>
-
+    
     <packaging>jar</packaging>
     <version>0.0.1-SNAPSHOT</version>
     
@@ -14,118 +14,95 @@
         <!-- Used as the 'Vendor' for JNLP generation -->
         <name>asmierciak</name>
     </organization>
-
+    
     <properties>
         <slf4j.version>1.6.1</slf4j.version>
     </properties>
-
-    <build>
-
-        <finalName>singletonshowcase</finalName>
-
-        <plugins>
-        <plugin>
-        <groupId>org.robovm</groupId>
-        <artifactId>robovm-maven-plugin</artifactId>
-        <version>2.2</version>
-       
-        <configuration>
-          <config>
-            <mainClass>com.asmierciak.designpatterns.singletonshowcase.MainApp</mainClass>
-            <os>ios</os>
-            <arch>x86</arch>
-          </config>
-          <includeJFX>true</includeJFX>
-        </configuration>
-        </plugin>
-        <plugin>
-        <groupId>com.zenjava</groupId>
-        <artifactId>javafx-maven-plugin</artifactId>
-        <version>2.0</version>
-        <configuration>
-        	<mainClass>application.Main</mainClass>
-        </configuration>
-      </plugin>
-        <plugin>
-            <artifactId>maven-plugin-plugin</artifactId>
-            <version>2.3</version>
-            <configuration>
-                <goalPrefix>robovm</goalPrefix>
-            </configuration>
-        </plugin>
-        <plugin>
-            <groupId>com.googlecode.maven-java-formatter-plugin</groupId>
-            <artifactId>maven-java-formatter-plugin</artifactId>
-            <version>0.4</version>
-            <configuration>
-                <configFile>${project.basedir}/formatter.xml</configFile>
-            </configuration>
-        </plugin>
-    </plugins>
-    </build>
-
-
-    <dependencies>
     
-    <dependency>
-        <groupId>com.oracle.javafx</groupId>
-        <artifactId>javafx</artifactId>
-        <version>2.2</version>
-    </dependency>
+    <scm>
+        <connection>scm:git:git://github.com/robovm/robovm-maven-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:robovm/robovm-maven-plugin.git</developerConnection>
+        <url>https://github.com/robovm/robovm-maven-plugin.git</url>
+    </scm>
+    
+    <repositories>
+        <repository>
+            <id>mojo-executor-repository</id>
+            <name>Mojo Executor Repository for Maven</name>
+            <url>http://twdata-m2-repository.googlecode.com/svn/</url>
+        </repository>
+    </repositories>
+    
+    <build>
+        
+        <finalName>singletonshowcase</finalName>
+        
+        <plugins>
+            <plugin>
+                <groupId>org.robovm</groupId>
+                <artifactId>robovm-maven-plugin</artifactId>
+                <version>0.0.13.1</version>
+                
+                <configuration>
+                    <config>
+                        <mainClass>com.asmierciak.designpatterns.singletonshowcase.MainApp</mainClass>
+                        <os>ios</os>
+                        <arch>x86</arch>
+                    </config>
+                    <includeJFX>true</includeJFX>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.zenjava</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>2.0</version>
+            </plugin>
+            
+            <plugin>
+                <artifactId>maven-plugin-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <goalPrefix>robovm</goalPrefix>
+                </configuration>
+            </plugin>
+            
+        </plugins>
+    </build>
+    
+    
+    <dependencies>
+        
+        <dependency>
+            <groupId>com.oracle.javafx</groupId>
+            <artifactId>javafx</artifactId>
+            <version>2.2</version>
+        </dependency>
         <!-- MigLayout -->
-      <dependency>
-          <groupId>org.robovm</groupId>
-          <artifactId>robovm-rt</artifactId>
-          <version>0.0.13</version>
-      </dependency>
-      <dependency>
-          <groupId>org.robovm</groupId>
-          <artifactId>robovm-cocoatouch</artifactId>
-          <version>0.0.13</version>
-      </dependency>
+        <dependency>
+            <groupId>org.robovm</groupId>
+            <artifactId>robovm-rt</artifactId>
+            <version>0.0.13</version>
+        </dependency>
+        <dependency>
+            <groupId>org.robovm</groupId>
+            <artifactId>robovm-cocoatouch</artifactId>
+            <version>0.0.13</version>
+        </dependency>
         <dependency>
             <groupId>com.miglayout</groupId>
             <artifactId>miglayout-javafx</artifactId>
             <version>4.2</version>
         </dependency>
-
-
-<dependency>
-    <groupId>org.apache.maven</groupId>
-    <artifactId>maven-plugin-api</artifactId>
-    <version>3.0</version>
-</dependency>
-
-<dependency>
-    <groupId>org.apache.maven</groupId>
-    <artifactId>maven-core</artifactId>
-    <version>3.0</version>
-</dependency>
-
-<dependency>
-    <groupId>org.codehaus.plexus</groupId>
-    <artifactId>plexus-archiver</artifactId>
-    <version>2.1.1</version>
-</dependency>
-
-<dependency>
-    <groupId>org.apache.maven</groupId>
-    <artifactId>maven-compat</artifactId>
-    <version>3.0</version>
-    <scope>compile</scope>
-</dependency>
-
-
         <!-- Apache Commons -->
-
+        
         <dependency>
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>
             <version>2.6</version>
         </dependency>
-
+        
         <!-- Logging  -->
-
+        
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -153,7 +130,7 @@
             <artifactId>json-io</artifactId>
             <version>2.2.31</version>
         </dependency>
-
+        
     </dependencies>
-
+    
 </project>
