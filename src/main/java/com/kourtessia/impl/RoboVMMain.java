@@ -1,12 +1,13 @@
 package com.kourtessia.impl;
 
-import javafx.application.Application;
-import org.robovm.cocoatouch.foundation.NSAutoreleasePool;
-import org.robovm.cocoatouch.foundation.NSDictionary;
-import org.robovm.cocoatouch.uikit.UIApplication;
-import org.robovm.cocoatouch.uikit.UIApplicationDelegate;
+import org.robovm.apple.foundation.NSAutoreleasePool;
+import org.robovm.apple.foundation.NSDictionary;
+import org.robovm.apple.uikit.UIApplication;
+import org.robovm.apple.uikit.UIApplicationDelegateAdapter;
 
-public class RoboVMMain extends UIApplicationDelegate.Adapter {
+import javafx.application.Application;
+
+public class RoboVMMain extends UIApplicationDelegateAdapter {
 
     @Override
     public boolean didFinishLaunching(UIApplication application, NSDictionary launchOptions) {
@@ -32,3 +33,4 @@ public class RoboVMMain extends UIApplicationDelegate.Adapter {
         pool.drain();
     }
 }
+
