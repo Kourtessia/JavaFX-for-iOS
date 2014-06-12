@@ -14,7 +14,7 @@
 		</data>
 		<key>lib/classes2.jar</key>
 		<data>
-		q9Smldf9u2zRQ9qKQdAioekVGVc=
+		iiCDdubJG9P2gMMos0C+ZXB5kcQ=
 		</data>
 		<key>lib/commons-lang-2.6.jar</key>
 		<data>
@@ -85,7 +85,7 @@
 		</data>
 		<key>lib/classes2.jar</key>
 		<data>
-		q9Smldf9u2zRQ9qKQdAioekVGVc=
+		iiCDdubJG9P2gMMos0C+ZXB5kcQ=
 		</data>
 		<key>lib/commons-lang-2.6.jar</key>
 		<data>
@@ -181,16 +181,9 @@
 			<key>weight</key>
 			<real>100</real>
 		</dict>
-		<key>^(Frameworks|SharedFrameworks|Plugins|Plug-ins|XPCServices|Helpers|MacOS)/</key>
+		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
 		<dict>
 			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>0.0</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>top</key>
 			<true/>
 			<key>weight</key>
 			<real>0.0</real>

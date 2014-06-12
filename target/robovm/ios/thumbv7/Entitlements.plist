@@ -5,7 +5,7 @@
 	<key>get-task-allow</key>
 	<true/>
 	<key>application-identifier</key>
-	<string>MV5H3AEE98.com.asmierciak.designpatterns.singletonshowcase.MainApp</string>
+	<string>MV5H3AEE98.com.kourtessia.impl.RoboVMMain</string>
 	<key>com.apple.developer.default-data-protection</key>
 	<string>NSFileProtectionComplete</string>
 	<key>keychain-access-groups</key>
